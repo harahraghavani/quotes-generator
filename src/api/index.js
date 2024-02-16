@@ -19,7 +19,7 @@ export const api = async ({
       headers: {
         "Content-Type": "application/json",
       },
-      url: `https://api.quotable.io${url}${id ? id : ""}${params ? convertObjToQueryString(params) : ""
+      url: `${process.env.REACT_APP_API_BASE_URL}${url}${id ? id : ""}${params ? convertObjToQueryString(params) : ""
         }`,
     };
 
